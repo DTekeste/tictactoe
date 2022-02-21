@@ -1,3 +1,6 @@
+/**
+ * Handles determining if a player has won.
+ */
 public class WinningBoard {
     public static final String X = "X";
     public static final String O = "O";
@@ -8,6 +11,12 @@ public class WinningBoard {
 
     }
 
+    /**
+     * Determines if a player won the game.
+     *
+     * @param playerCharacter The player's character (X or O)
+     * @return True if a player won, false if otherwise.
+     */
     public boolean isBoardWon(String playerCharacter) {
         boolean areRowsOrColumnsWon = areRowsOrColumnsWon(playerCharacter);
         boolean isDiagonalLeftToRightWon = isDiagonalLeftToRightWon(playerCharacter);
@@ -71,6 +80,3 @@ public class WinningBoard {
     }
 
 }
-
-//|| board[i][1].equals(X) || board[i][1].equals(O)
-//        || board[i][2].equals(X) || board[i][2].equals(O))

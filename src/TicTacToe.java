@@ -17,7 +17,6 @@ public class TicTacToe {
         initializeBoard();
         getUserInput();
 
-
     }
 
     private static void getUserInput() {
@@ -50,10 +49,7 @@ public class TicTacToe {
                 return;
             }
         }
-
-
     }
-
 
     private static void initializeBoard() {
         for (int i = 0; i < BOARD.length; i++) {
@@ -61,9 +57,15 @@ public class TicTacToe {
                 BOARD[i][j] = " ";
             }
         }
-
     }
 
+    /**
+     * Displays the board and the player's current move.
+     *
+     * @param row             The row index of the tictactoe board
+     * @param column          The column index of the tictactoe board
+     * @param playerCharacter The player's character (X or O)
+     */
     public static void move(int row, int column, String playerCharacter) {
         row = row - 1;
         column = column - 1;
@@ -100,9 +102,7 @@ public class TicTacToe {
         }
         System.out.println();
 
-
         System.out.println();
     }
-
 
 }
